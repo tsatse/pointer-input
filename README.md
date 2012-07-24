@@ -13,6 +13,7 @@ Usage
 
 Methods
 -------
+
 **.addCallBack(callbackName, callback)**
 
 *callbackName* : a combination of the event type and the button name. Event types are 'down', 'up' and 'drag. Button names are 'left', 'middle' and 'right.
@@ -55,3 +56,8 @@ The previously attached canvas element:
 **.detach()**
 
 Call that when you don't want the callbacks to be called any more.
+
+Licence
+-------
+
+MIT
