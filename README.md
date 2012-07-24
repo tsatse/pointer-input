@@ -9,19 +9,22 @@ Usage
 - add the script to your page or use it as a require.js module
 - instantiate a *PointerInput* object (or the name you gave through require.js)
 - attach that instance to a canvas object with the *.attach(canvasObject)* method
-- call *.addCallBack(callbackName, callback)* on this instance with the following parameters :
+- call *.addCallBack(callbackName, callback)* on this instance
 
 Methods
 -------
 **.addCallBack(callbackName, callback)**
 
-*callbackName* : is a combination of the event type and the button name. Event types are 'down', 'up' and 'drag. Button names are 'left', 'middle' and 'right.
+*callbackName* : a combination of the event type and the button name. Event types are 'down', 'up' and 'drag. Button names are 'left', 'middle' and 'right.
 You can also omit the button name if you want the callback to be called for any button.
-So for example, *callbackName* can be 'down', 'down-left' or 'drag-middle'.
+So for example, *callbackName* can be
+* 'down'
+* 'down-left'
+* 'drag-middle'
+* etc.
 
-*callback* : is the callback function that you want to call
+*callback* : the callback function that you want to call
 
-that's it
 
 **callback(pointer, dx, dy)**
 
@@ -46,6 +49,8 @@ The position of the pointer when the button was last pressed (for dragging event
 The previously attached canvas element:
 
 * *pointer.attachedElement*
+
+*dx, dy* : drag information provided to drag events (distance since last button press)
 
 **.detach()**
 
