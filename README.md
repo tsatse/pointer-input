@@ -41,7 +41,7 @@ The position of the pointer at the time of the event :
 
 * *pointer.pos*
 
-The position of the pointer when the button was last pressed (for dragging events) :
+The position of the pointer when the button was last pressed or on the previous dragging event (for dragging events) :
 
 * *pointer.last.left*
 * *pointer.last.middle*
