@@ -1,4 +1,4 @@
-﻿(function() {
+﻿(function(global) {
     var definitionFunction = function() {
         var constructor = function() {
             this.left = null;
@@ -159,10 +159,13 @@
         return constructor;
     };
 
-    if(typeof define === 'function') {
+    if(typeof define === 'function' && define.amd) {
         define(definitionFunction);
     }
-    else {
-        PointerInput = definitionFunction();
+    else if ( typeof module === 'object' && module.exports ) {
+        module.exports = definitionFunction();
     }
-}) ();
+    else {
+        global.PointerInput = definitionFunction();
+    }
+}) (this);

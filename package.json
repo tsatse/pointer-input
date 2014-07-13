@@ -1,0 +1,26 @@
+{
+  "name": "pointer-input",
+  "version": "0.0.0",
+  "description": "Allows you to associate callbacks to pointer events on a canvas object",
+  "main": "pointer-input.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsatse/pointer-input.git"
+  },
+  "keywords": [
+    "html5",
+    "canvas",
+    "pointer",
+    "mouse",
+    "input"
+  ],
+  "author": "tsatse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tsatse/pointer-input/issues"
+  },
+  "homepage": "https://github.com/tsatse/pointer-input"
+}
