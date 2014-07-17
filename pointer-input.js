@@ -44,7 +44,7 @@
             readGlobalMouse: function(event) {
                 var result = {};
                 var domElement = event.currentTarget;
-                if (event.pageX != undefined && event.pageY != undefined) {
+                if (event.pageX !== undefined && event.pageY !== undefined) {
                     result.x = event.pageX;
                     result.y = event.pageY;
                 }
@@ -59,16 +59,16 @@
                 var left = 0;
                 var top = 0;
                 var e = element;
-                while (e.offsetParent != undefined && e.offsetParent != null)
+                while (e.offsetParent !== undefined && e.offsetParent !== null)
                 {
-                    left += e.offsetLeft + (e.clientLeft != null ? e.clientLeft : 0);
-                    top += e.offsetTop + (e.clientTop != null ? e.clientTop : 0);
+                    left += e.offsetLeft + (e.clientLeft !== null ? e.clientLeft : 0);
+                    top += e.offsetTop + (e.clientTop !== null ? e.clientTop : 0);
                     e = e.offsetParent;
                 }
                 return {
                     x: left,
                     y: top
-                }
+                };
             },
 
             getMousePosition: function(event, domElement) {
@@ -154,6 +154,12 @@
 
             addCallback: function(type, callback) {
                 this.callbacks[type].push(callback);
+            },
+
+            removeCallback: function(type, callbackToRemove) {
+                this.callbacks[type] = this.callbacks[type].filter(function(callback) {
+                    return callback !== callbackToRemove;
+                });
             }
         };
         return constructor;
